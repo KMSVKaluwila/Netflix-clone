@@ -1,0 +1,114 @@
+.titel-card {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.titel-card h2 {
+    color: #E50914;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    /* background: linear-gradient(110deg, #000000 5%, #E50914 60%, #8E000A 60%, #000000 100%); */
+    text-align: start;
+    width: 20%;
+}
+
+.card-list {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+}
+
+.card-list::-webkit-scrollbar {
+    display: none;
+}
+
+.card-list img {
+    width: 250px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: brightness(0.9);
+    -webkit-filter: brightness(0.9);
+}
+
+.card-list img:hover {
+    transform: scale(1.05);
+    border-bottom: #E50914 2px solid;
+}
+
+
+.card-list .card p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.card {
+    text-decoration: none;
+    /* Remove the blue underline */
+    color: inherit;
+    /* Keeps text color same as parent */
+}
+
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 920px) {
+    .titel-card {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .titel-card h2 {
+        font-size: 1rem;
+        width: 50%;
+        text-align: center;
+        margin: 0 auto 15px;
+    }
+
+    .card-list {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .card-list img {
+        width: 180px;
+        /* Smaller images */
+    }
+
+    .card-list .card p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media screen and (max-width: 480px) {
+    .titel-card {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .titel-card h2 {
+        font-size: 0.9rem;
+        width: 80%;
+    }
+
+    .card-list {
+        gap: 5px;
+        overflow-x: scroll;
+    }
+
+    .card-list img {
+        width: 150px;
+        /* Even smaller for mobile */
+    }
+
+    .card-list .card p {
+        font-size: 0.9rem;
+    }
+}

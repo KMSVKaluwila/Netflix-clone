@@ -1,0 +1,271 @@
+.login {
+    height: 100vh;
+    background-image: linear-gradient(#0000007e, #0000007e), url(/src/assets/background_banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.login-logo {
+    width: 150px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 480px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 60px;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.login-form .input-fild {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.login-form input::placeholder {
+    color: #fff;
+    opacity: 0.7;
+    font-size: small;
+    font-weight: 500;
+}
+
+.login-form button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: #E50914;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #E50914d3;
+}
+
+.login-form-group {
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.checkbox-group{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Form control label styling */
+.form-control {
+    display: flex;
+    align-items: center; /* Align checkbox and text vertically */
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 500; /* Slightly lighter than bold for elegance */
+    color: #fff; /* White text to match theme */
+    cursor: pointer;
+}
+
+/* Hide default checkbox */
+input[type="checkbox"] {
+    appearance: none; /* Remove default styling */
+    -webkit-appearance: none;
+    width: 1.15em;
+    height: 1.15em;
+    border: 2px solid rgba(255, 255, 255, 0.7); /* White border with slight opacity */
+    border-radius: 4px; /* Slightly rounded */
+    background-color: rgba(255, 255, 255, 0.1); /* Match input field background */
+    margin-right: 0.5em; /* Space between checkbox and text */
+    position: relative;
+    cursor: pointer;
+    outline: none;
+
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Checkmark styling */
+input[type="checkbox"]::before {
+    content: "\2713"; /* Unicode checkmark */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Center and start hidden */
+    font-size: 1em;
+    color: #E50914; /* Red checkmark to match button */
+    transition: transform 0.2s ease-in-out; /* Smooth animation */
+}
+
+/* When checked */
+input[type="checkbox"]:checked {
+    background-color: rgba(229, 9, 20, 0.2); /* Subtle red tint when checked */
+    border-color: #E50914; /* Match button color */
+}
+
+input[type="checkbox"]:checked::before {
+    transform: translate(-50%, -50%) scale(1); /* Show checkmark */
+}
+
+/* Hover effect */
+input[type="checkbox"]:hover {
+    border-color: #E50914; /* Red border on hover */
+}
+
+/* Focus effect (accessibility) */
+input[type="checkbox"]:focus {
+    box-shadow: 0 0 5px rgba(229, 9, 20, 0.5); /* Subtle red glow */
+}
+
+.login-need-help{
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: end;
+}
+
+.form-switch {
+    margin-top: 40px;
+    color: #737373;
+}
+
+.form-switch a {
+    color: #E50914d3;
+    text-decoration: none;
+    font-weight: 600;
+}
+.form-switch a:hover {
+    color: #E50914;
+}
+
+.login-spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+}
+
+.login-spinner img {
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+.login-spinner h1 {
+    color: #E50914;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+    .login-form {
+        max-width: 90%; /* Make form take more width */
+        padding: 40px; /* Reduce padding */
+    }
+
+    .login-logo {
+        width: 120px; /* Reduce logo size */
+    }
+
+    .login-form h1 {
+        font-size: 1.2rem; /* Decrease font size */
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr; /* Stack checkboxes vertically */
+    }
+
+    .login-spinner img {
+        width: 40px; 
+        height: 40px;
+    }
+
+    .checkbox-group{
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile Phones (480px and below) */
+@media screen and (max-width: 480px) {
+    .login-form {
+        padding: 30px; /* Reduce padding further */
+    }
+
+    .login-logo {
+        width: 100px; /* Smaller logo */
+    }
+
+    .login-form h1 {
+        font-size: 1rem; /* Smaller heading */
+    }
+
+    .login-form .input-fild {
+        padding: 8px; /* Reduce padding */
+        font-size: 0.9rem;
+    }
+
+    .login-form button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .checkbox-group {
+        display: block; /* Show checkboxes in a single column */
+    }
+
+    .login-spinner img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .checkbox-group{
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
